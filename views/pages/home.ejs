@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>Startseite</h1>
+    <div>
+        <% genres.genres.forEach((g)=> { %>
+            <div>
+                <a href="/genre/<%- g.id %>">
+                    <%- g.name %>
+                </a>
+            </div>
+            <%}) %>
+    </div>
+    <main>
+        <% movies.results.forEach((m)=> { %>
+            <div>
+                <h1>
+                    <%- m.title %>
+                </h1>
+                <img src="https://image.tmdb.org/t/p/w500/<%- m.poster_path %>" alt="">
+                <a href="/details/<%- m.id %>">Mehr zum Film</a>
+                <!-- 453395 -->
+            </div>
+            <%}) %>
+    </main>
+
+</body>
+
+</html>

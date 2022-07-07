@@ -1,0 +1,21 @@
+{
+  "name": "backend_express_lev3_1_movie_app",
+  "version": "1.0.0",
+  "description": "app, um nach Filmen zu suchen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "filme",
+    "details",
+    "app"
+  ],
+  "author": "Michaela Werthmann",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}
