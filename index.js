@@ -39,13 +39,12 @@ app.get("/details/:movieId", (req, res) => {
 
 })
 
-app.get("genre/:genreId", (req, res) => {
+app.get("/genre/:genreId", (req, res) => {
     const genreId = req.params.genreId;
 
     axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=80fc0be7bcb18707550c86f288ec17fe&with_genres=${genreId}`)
         .then((response) => {
             const listGenre = response.data
-            console.log(listGenre)
             res.render("pages/genre.ejs", { listGenre })
         })
 })
